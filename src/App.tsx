@@ -3,7 +3,6 @@ import { Navigate, Route, Routes } from 'react-router-dom';
 import { ReactRouterGlobalNavigation } from './helpers/ReactRouterGlobalNavigation';
 import UrlContextProvider from './helpers/UrlContext';
 import { URL_PATHS } from './helpers/constants';
-import { redirectToLoginPage } from './helpers/generic';
 import { RouteUpdater } from './helpers/interface/IApp';
 // import { getSession } from './helpers/localStorageHelper';
 
@@ -42,37 +41,37 @@ const App = ({
   }, []);
 
   const getRouterDetails = () => {
-    if (
-      !insideRouter
-      // && !getSession()
-    ) {
-      redirectToLoginPage();
-    } else {
-      return (
-        <Routes>
-          <Route
-            path="/"
-            element={
-              <Navigate
-                to={
-                  insideRouter
-                    ? `/${pathParts[1]}${WELCOME_SCREEN}`
-                    : WELCOME_SCREEN
-                }
-                replace={true}
-              />
-            }
-          />
-          {defaultRoutes.map((router) => (
-            <Route
-              path={router.path}
-              element={router.element}
-              key={router.path}
+    // if (
+    //   !insideRouter
+    //   && !getSession()
+    // ) {
+    //   redirectToLoginPage();
+    // } else {
+    return (
+      <Routes>
+        <Route
+          path="/"
+          element={
+            <Navigate
+              to={
+                insideRouter
+                  ? `/${pathParts[1]}${WELCOME_SCREEN}`
+                  : WELCOME_SCREEN
+              }
+              replace={true}
             />
-          ))}
-        </Routes>
-      );
-    }
+          }
+        />
+        {defaultRoutes.map((router) => (
+          <Route
+            path={router.path}
+            element={router.element}
+            key={router.path}
+          />
+        ))}
+      </Routes>
+    );
+    // }
   };
 
   return (

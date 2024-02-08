@@ -11,10 +11,5 @@ export const store = configureStore({
     counter: counterReducer,
     todos: todoReducer
   },
-  middleware: (getDefaultMiddleware) =>
-    getDefaultMiddleware().concat(
-      todoMiddleware,
-      apiMiddleware,
-      apiErrorMiddleware
-    )
+  middleware: [todoMiddleware, apiMiddleware, apiErrorMiddleware]
 });
