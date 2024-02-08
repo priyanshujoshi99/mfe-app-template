@@ -1,0 +1,22 @@
+html {
+  font-size: 13px;
+  font-size: var(--font-size-regular);
+  font-family: var(--font-source-sanspro-regular);
+}
+
+ul,
+li {
+  list-style-type: none;
+}
+
+button:focus {
+  outline: 0;
+}
+
+p {
+  margin-block: 0 0;
+}
+
+.container {
+  margin: 0 auto;
+}

@@ -1,0 +1,29 @@
+@font-face {
+  font-family: 'sourcesanspro-300';
+  src: url('../assets/fonts/sourcesanspro300.woff2') format('woff2');
+  font-style: 'normal';
+}
+
+@font-face {
+  font-family: 'sourcesanspro-400';
+  src: url('../assets/fonts/sourcesanspro400.woff2') format('woff2');
+  font-style: 'normal';
+}
+
+@font-face {
+  font-family: 'sourcesanspro-600';
+  src: url('../assets/fonts/sourcesanspro600.woff2') format('woff2');
+  font-style: 'normal';
+}
+
+@font-face {
+  font-family: 'sourcesanspro-700';
+  src: url('../assets/fonts/sourcesanspro700.woff2') format('woff2');
+  font-style: 'normal';
+}
+
+@font-face {
+  font-family: 'sourcesanspro-900';
+  src: url('../assets/fonts/sourcesanspro900.woff2') format('woff2');
+  font-style: 'normal';
+}

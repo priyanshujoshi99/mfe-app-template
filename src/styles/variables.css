@@ -1,0 +1,9 @@
+:root {
+  --font-size-regular: rem(13px);
+  --font-source-sanspro-light: sourcesanspro-300, sans-serif;
+  --font-source-sanspro-regular: sourcesanspro-400, sans-serif;
+  --font-source-sanspro-semi-bold: sourcesanspro-600, sans-serif;
+  --font-source-sanspro-bold: sourcesanspro-700, sans-serif;
+  --font-source-sanspro-black: sourcesanspro-900, sans-serif;
+  --primary-color: hsla(206deg, 100%, 33%, 1);
+}
