@@ -6,16 +6,13 @@ export default ({ mode }) => {
   const env = loadEnv(mode, process.cwd(), '');
 
   console.log('mode :: ' + mode);
-  console.log(
-    `mode :: ${mode} \n hub url :: ${env.VITE_REACT_APP_NFS_HUB_URL}`
-  );
 
   return defineConfig({
-    base: '/promising-engine-mfe',
+    base: '/mfe-app',
     plugins: [
       react(),
       federation({
-        name: 'promisingEngine',
+        name: 'mfeApp',
         filename: 'remoteEntry.js',
         exposes: {
           './App': './src/App.tsx',
@@ -31,11 +28,11 @@ export default ({ mode }) => {
       })
     ],
     server: {
-      port: 5432,
+      port: 5991,
       strictPort: true
     },
     preview: {
-      port: 5432,
+      port: 5991,
       strictPort: true
     },
     build: {
