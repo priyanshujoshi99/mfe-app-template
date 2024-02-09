@@ -14,6 +14,7 @@ export default ({ mode }) => {
       federation({
         name: 'mfeApp',
         filename: 'remoteEntry.js',
+        remotes: {},
         exposes: {
           './App': './src/App.tsx',
           './AppStore': './src/app/storeProvider.tsx'
